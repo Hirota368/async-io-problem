@@ -10,7 +10,7 @@ https.get('https://www.nicovideo.jp/ranking/genre/all?term=hour&rss=2.0&lang=ja-
       data += chunk;
     })
     .on('end', () => {
+      fs.writeFile('test.txt', data, 'utf8', () => {});
     });
 });
 
-fs.writeFile('test.txt', data, 'utf8', () => {});
